@@ -1,0 +1,21 @@
+curl -X GET --header 'Accept: application/json' 'https://fr.wikipedia.org/wiki/Ligue_des_champions_de_l%27UEFA'
+
+The one got from Curl is a brut Html page , but the one from the browser is formatted , so the browser read and format the HTML page 
+to display it in an elegant manner ( how it should be displayed )
+
+to get the image : 
+$ curl -X GET --header 'Accept: image/webp' 'https://httpbin.org/image'
+
+in png : 
+$ curl -X GET --header 'Accept: image/png' 'https://httpbin.org/image'
+
+
+in jpeg : 
+
+$ curl -X GET --header 'Accept: image/jpeg' 'https://httpbin.org/image'
+
+the  return code is a code indicating if the Request was satisfied or not ( in our case 200 ( success ))
+the content type : the type expected by the response , here it's : "image/png" or "image/png"
+
+
+curl -X GET --header 'Accept: application/json' 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Bertrand_Russell&format=json&rvend=20170729000000&rvstart=20170801000000'
